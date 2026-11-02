@@ -1,4 +1,6 @@
 local wezterm = require("wezterm")
+-- この設定ファイル自身のディレクトリから keybinds.lua を読む (WSL 側リポジトリを直接参照するため)
+package.path = (wezterm.config_file:match("^(.*)[/\\]") or wezterm.config_dir) .. "/?.lua;" .. package.path
 local config = wezterm.config_builder()
 
 config.default_domain = 'WSL:Ubuntu'
