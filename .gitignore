@@ -1,0 +1,6 @@
+.zcompdump*
+*.old
+*.save
+*.local
+nvim-guide.html
+.DS_Store

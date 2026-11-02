@@ -1,0 +1,7 @@
+[user]
+	email = t.showno.zzz@gmail.com
+	name = tshonosuke
+[ghq]
+	root = /home/tshow/ghq
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
