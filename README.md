@@ -20,9 +20,9 @@ WEZTERM_HOME=~ ./install.sh wezterm   # WSL 以外で wezterm を置く場合
 
 - 既存ファイルは `~/.dotfiles_backup/<timestamp>/` に退避される。再実行しても冪等。
 - `zsh` ターゲットは oh-my-zsh と `zsh-autosuggestions` / `zsh-syntax-highlighting` が無ければ clone する。
-- wezterm: Windows アプリは WSL 内の symlink を辿れず、Windows 側 symlink は管理者権限が要る。そのため Windows ユーザー環境変数 `WEZTERM_CONFIG_FILE` に `\\wsl.localhost\Ubuntu\...\wezterm\.wezterm.lua` を設定し、リポジトリを直接読ませる。ファイルのコピーは無く、編集は WezTerm の再読込 (`Ctrl+Shift+R`) で反映される。初回設定後は WezTerm を完全終了して起動し直す。
+- wezterm: Windows アプリは WSL 内の symlink を辿れず、Windows 側 symlink は管理者権限が要る。そのため Windows ユーザー環境変数 `WEZTERM_CONFIG_FILE` に `\\wsl.localhost\Ubuntu\...\wezterm\.wezterm.lua` を設定し、リポジトリを直接読ませる。ファイルのコピーは無い。初回設定後は WezTerm を完全終了して起動し直す。編集後の反映は `Ctrl+Shift+R` (ReloadConfiguration)。自動再読込が効くかは未検証。
 - 旧方式で Windows 側に置いたコピー (`%USERPROFILE%\.wezterm.lua` など) は `~/.dotfiles_backup/` に退避される。
-- 制約: WezTerm 起動時に WSL (`\\wsl.localhost`) へアクセスできる必要がある。読めない場合は WezTerm が既定設定で起動する。
+- 制約: WezTerm 起動時に WSL (`\\wsl.localhost`) へアクセスできる必要がある。
 
 ## 前提 (本リポジトリでは管理しない)
 
